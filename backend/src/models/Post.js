@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const PostSchema = new.mongoose.Schema(
+const PostSchema = new mongoose.Schema(
 {
     author: String,
     place: String,
