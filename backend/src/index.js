@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://user:Rs7eIpbWvmGiHOXV@cluster0-aygqp.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://<user>:<password>@cluster0-aygqp.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true   
 });
 
