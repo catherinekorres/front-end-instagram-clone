@@ -1,8 +1,11 @@
 const express = require('express');
-const routes = new express.Router();
+const multer = require('multer');
+const uploadConfig = require('./config/upload');
+const PostController = require('./controllers/PostController');
 
-routes.get('/', (req, res) => {
-    return res.send(`Olá ${req.query.name}`);
-});
+const routes = new express.Router();
+const upload = multer(uploadConfig);
+
+routes.post('/posts', upload.single('image'), PostController.store);
 
 module.exports = routes;
